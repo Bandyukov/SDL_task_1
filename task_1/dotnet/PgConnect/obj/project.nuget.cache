@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "ONmgNcN9XX2nUBzaYVgFNGDLX88VAxwwGUfh7Z1o+eUnD2l3ZWpE4j5P41gOa+PhlP1CH2ThFdeB1eAkWlqs3Q==",
+  "success": true,
+  "projectFilePath": "/Users/aleksejbandukov/sdl/task_1/dotnet/PgConnect/PgConnect.csproj",
+  "expectedPackageFiles": [
+    "/Users/aleksejbandukov/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/8.0.0/microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "/Users/aleksejbandukov/.nuget/packages/microsoft.extensions.logging.abstractions/8.0.0/microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
+    "/Users/aleksejbandukov/.nuget/packages/npgsql/8.0.1/npgsql.8.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
