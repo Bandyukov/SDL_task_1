@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PgConnect")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+77f703a9dfd995387d57fc59f397250a00d23922")]
 [assembly: System.Reflection.AssemblyProductAttribute("PgConnect")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PgConnect")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -8,24 +8,24 @@ var userName =  Console.ReadLine();
 Console.WriteLine("Password is ?");
 var userPassword =  Console.ReadLine();
 
-Console.WriteLine($"your name is {userName} with password {userPassword}");
-
-var builder = new ConfigurationBuilder()
+IConfiguration config = new ConfigurationBuilder()
     .SetBasePath(Directory.GetCurrentDirectory())
-    .AddJsonFile("appsettings.json", optional: false);
-
-IConfiguration config = builder.Build();
+    .AddJsonFile("appsettings.json", optional: false)
+    .Build();
 
 var connectionString = config.GetConnectionString("DefaultConnection");
 
-await using var dataSource = NpgsqlDataSource.Create(string.Format(connectionString!, userName, userPassword));
+try {
+    await using var dataSource = NpgsqlDataSource.Create(string.Format(connectionString!, userName, userPassword));
 
-// Retrieve all rows
-await using (var cmd = dataSource.CreateCommand("SELECT VERSION();"))
-await using (var reader = await cmd.ExecuteReaderAsync())
-{
-    while (await reader.ReadAsync())
+    await using (var cmd = dataSource.CreateCommand("SELECT VERSION();"))
+    await using (var reader = await cmd.ExecuteReaderAsync())
     {
-        Console.WriteLine(reader.GetString(0));
+        while (await reader.ReadAsync())
+        {
+            Console.WriteLine(reader.GetString(0));
+        }
     }
+} catch (Exception e) {
+    Console.WriteLine("ERROR: " + e);
 }

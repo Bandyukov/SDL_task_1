@@ -25,3 +25,4 @@
 /Users/aleksejbandukov/sdl/task_1/dotnet/PgConnect/obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.PgConnect.props
 /Users/aleksejbandukov/sdl/task_1/dotnet/PgConnect/obj/Debug/net8.0/staticwebassets.pack.json
 /Users/aleksejbandukov/sdl/task_1/dotnet/PgConnect/obj/Debug/net8.0/scopedcss/bundle/PgConnect.styles.css
+/Users/aleksejbandukov/sdl/task_1/dotnet/PgConnect/obj/Debug/net8.0/PgConnect.sourcelink.json
