@@ -2,6 +2,14 @@ version: '3.1'
 
 services:
 
+  app:
+    image: pinger:1.0.0
+    restart: always
+    build:
+      context: ./dotnet/PgConnect/
+    env_file:
+      - ./settings_bad.env
+
   db:
     image: sdl/postgres:latest_ru
     restart: always

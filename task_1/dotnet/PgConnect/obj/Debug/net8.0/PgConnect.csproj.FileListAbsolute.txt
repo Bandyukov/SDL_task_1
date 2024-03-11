@@ -26,3 +26,6 @@
 /Users/aleksejbandukov/sdl/task_1/dotnet/PgConnect/obj/Debug/net8.0/staticwebassets.pack.json
 /Users/aleksejbandukov/sdl/task_1/dotnet/PgConnect/obj/Debug/net8.0/scopedcss/bundle/PgConnect.styles.css
 /Users/aleksejbandukov/sdl/task_1/dotnet/PgConnect/obj/Debug/net8.0/PgConnect.sourcelink.json
+/Users/aleksejbandukov/sdl/task_1/dotnet/PgConnect/bin/Debug/net8.0/Serilog.dll
+/Users/aleksejbandukov/sdl/task_1/dotnet/PgConnect/bin/Debug/net8.0/Serilog.Sinks.Console.dll
+/Users/aleksejbandukov/sdl/task_1/dotnet/PgConnect/bin/Debug/net8.0/Serilog.Sinks.File.dll
