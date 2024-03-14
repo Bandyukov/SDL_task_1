@@ -19,6 +19,31 @@
         "cells": [
           {
             "position": {
+              "x": 2050,
+              "y": 170.00000000000205
+            },
+            "size": {
+              "width": 550,
+              "height": 400
+            },
+            "shape": "trust-boundary-box",
+            "attrs": {
+              "headerText": {
+                "text": "Trust Network"
+              }
+            },
+            "id": "fd70a4fa-36ac-4793-bf8b-2aff4879e74d",
+            "zIndex": -1,
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "Trust Network",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
               "x": 1740,
               "y": 340
             },
@@ -328,6 +353,32 @@
                 "x": 2310,
                 "y": 250
               }
+            ]
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Internet Boundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "id": "b0e3697f-ab1c-4a57-9eda-73928a712ed5",
+            "source": {
+              "x": 1920,
+              "y": 170
+            },
+            "target": {
+              "x": 1920,
+              "y": 580
+            },
+            "labels": [
+              "Internet Boundary"
             ]
           }
         ]
