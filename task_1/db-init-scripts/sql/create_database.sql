@@ -1,0 +1,3 @@
+CREATE DATABASE sdl_task_3;
+CREATE ROLE "user3" LOGIN PASSWORD 'password';
+GRANT USAGE ON SCHEMA public TO "user3";

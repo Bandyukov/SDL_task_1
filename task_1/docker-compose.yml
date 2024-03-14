@@ -2,15 +2,26 @@ version: '3.1'
 
 services:
 
+  app:
+    image: sdl:3.0
+    restart: always
+    build:
+      context: ./dotnet/PgConnect/
+    ports:
+      - "7777:77"
+
   db:
     image: sdl/postgres:latest_ru
     restart: always
+    build:
+      context: .
     ports:
       - 5432:5432
     environment:
       POSTGRES_PASSWORD: password
     volumes: 
       - ./../pg_data:/var/lib/postgresql/data
+      - ./db-init-scripts/:/docker-entrypoint-initdb.d/
 
   adminer:
     image: adminer

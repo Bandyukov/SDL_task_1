@@ -14,18 +14,47 @@ IConfiguration config = new ConfigurationBuilder()
     .Build();
 
 var connectionString = config.GetConnectionString("DefaultConnection");
+await using var dataSource = NpgsqlDataSource.Create(string.Format(connectionString!, userName, userPassword));
 
 try {
-    await using var dataSource = NpgsqlDataSource.Create(string.Format(connectionString!, userName, userPassword));
+    await using var connection = await dataSource.OpenConnectionAsync();
+    
+    if (connection.State == System.Data.ConnectionState.Open) {
+        Console.WriteLine("Connection is established");
 
-    await using (var cmd = dataSource.CreateCommand("SELECT VERSION();"))
-    await using (var reader = await cmd.ExecuteReaderAsync())
-    {
-        while (await reader.ReadAsync())
-        {
-            Console.WriteLine(reader.GetString(0));
-        }
+        Console.WriteLine("Enter command");
+
+        while (true) {
+
+            var command = Console.ReadLine() ?? "";
+
+            switch (command) {
+                case CommandsConfig.HELP:
+                    CommandExecutor.ShowHelp();
+                    break;
+
+                case CommandsConfig.SHOW_TABLE:
+                    await CommandExecutor.ShowTable(connection);
+                    break;
+
+                case CommandsConfig.CREATE_FRANCHISE:
+                    await CommandExecutor.CreateFranchise(connection);
+                    break;
+
+                case CommandsConfig.MODIFY_CAFE:
+                    await CommandExecutor.ModifyCafe(connection);
+                    break;
+
+                default:
+                    Console.WriteLine($"Command {command} does not exist");
+                    break;
+            }
+        }  
+    } else {
+        Console.Error.WriteLine("Could not establish connection. Try again");
     }
+} catch (Npgsql.PostgresException e) {
+    Console.Error.WriteLine("This user does not exist. Try again");
 } catch (Exception e) {
-    Console.WriteLine("ERROR: " + e);
-}
+    Console.Error.WriteLine("Unexpected error " + e.StackTrace);
+}    
