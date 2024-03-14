@@ -32,8 +32,8 @@
                 "text": "Trust Network"
               }
             },
-            "id": "fd70a4fa-36ac-4793-bf8b-2aff4879e74d",
             "zIndex": -1,
+            "id": "fd70a4fa-36ac-4793-bf8b-2aff4879e74d",
             "data": {
               "type": "tm.BoundaryBox",
               "name": "Trust Network",
@@ -63,8 +63,8 @@
             },
             "visible": true,
             "shape": "actor",
-            "id": "341007bf-3b1c-4a28-9e30-1b78dc823a6f",
             "zIndex": 1,
+            "id": "341007bf-3b1c-4a28-9e30-1b78dc823a6f",
             "data": {
               "type": "tm.Actor",
               "name": "User",
@@ -97,8 +97,8 @@
             },
             "visible": true,
             "shape": "process",
-            "id": "33ad4139-3353-4217-8a9c-17581dec553a",
             "zIndex": 2,
+            "id": "33ad4139-3353-4217-8a9c-17581dec553a",
             "data": {
               "type": "tm.Process",
               "name": "Application",
@@ -137,8 +137,8 @@
             },
             "visible": true,
             "shape": "store",
-            "id": "ca785df2-77cf-4228-8f86-e4997b1a68af",
             "zIndex": 3,
+            "id": "ca785df2-77cf-4228-8f86-e4997b1a68af",
             "data": {
               "type": "tm.Store",
               "name": "Postgres Database",
@@ -186,6 +186,9 @@
               "threats": []
             },
             "id": "2ada3098-2eca-45e6-b725-6ac7ba7dd803",
+            "labels": [
+              "Response"
+            ],
             "source": {
               "cell": "33ad4139-3353-4217-8a9c-17581dec553a"
             },
@@ -197,9 +200,6 @@
                 "x": 1980,
                 "y": 490
               }
-            ],
-            "labels": [
-              "Response"
             ]
           },
           {
@@ -234,6 +234,9 @@
               "threats": []
             },
             "id": "c7fb17c8-91af-4431-880a-4d5109316e96",
+            "labels": [
+              "Use auth request"
+            ],
             "source": {
               "cell": "341007bf-3b1c-4a28-9e30-1b78dc823a6f"
             },
@@ -253,9 +256,6 @@
                 "x": 2100,
                 "y": 320
               }
-            ],
-            "labels": [
-              "Use auth request"
             ]
           },
           {
@@ -290,6 +290,9 @@
               "threats": []
             },
             "id": "882ebf2d-441e-4b5a-a827-64bdecfbb542",
+            "labels": [
+              "Response from DB"
+            ],
             "source": {
               "x": 2480,
               "y": 400
@@ -297,9 +300,6 @@
             "target": {
               "cell": "33ad4139-3353-4217-8a9c-17581dec553a"
             },
-            "labels": [
-              "Response from DB"
-            ],
             "vertices": [
               {
                 "x": 2330,
@@ -339,15 +339,15 @@
               "threats": []
             },
             "id": "0b616d82-9a09-4ee3-90ef-7e8e6b816c24",
+            "labels": [
+              "Request from DB\n"
+            ],
             "source": {
               "cell": "33ad4139-3353-4217-8a9c-17581dec553a"
             },
             "target": {
               "cell": "ca785df2-77cf-4228-8f86-e4997b1a68af"
             },
-            "labels": [
-              "Request from DB\n"
-            ],
             "vertices": [
               {
                 "x": 2310,
@@ -369,6 +369,9 @@
               "hasOpenThreats": false
             },
             "id": "b0e3697f-ab1c-4a57-9eda-73928a712ed5",
+            "labels": [
+              "Internet Boundary"
+            ],
             "source": {
               "x": 1920,
               "y": 170
@@ -376,10 +379,7 @@
             "target": {
               "x": 1920,
               "y": 580
-            },
-            "labels": [
-              "Internet Boundary"
-            ]
+            }
           }
         ]
       }
