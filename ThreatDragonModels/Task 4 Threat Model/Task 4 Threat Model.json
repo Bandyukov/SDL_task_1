@@ -2,15 +2,25 @@
   "version": "2.2.0",
   "summary": {
     "title": "Task 4 Threat Model",
-    "owner": "",
-    "description": "",
+    "owner": "Bandyukov",
+    "description": "Some descr",
     "id": 0
   },
   "detail": {
     "contributors": [],
-    "diagrams": [],
-    "diagramTop": 0,
-    "reviewer": "",
+    "diagrams": [
+      {
+        "id": 0,
+        "title": "New STRIDE diagram",
+        "diagramType": "STRIDE",
+        "placeholder": "New STRIDE diagram description",
+        "thumbnail": "./public/content/images/thumbnail.stride.jpg",
+        "version": "2.2.0",
+        "cells": []
+      }
+    ],
+    "diagramTop": 1,
+    "reviewer": "Bandyukov",
     "threatTop": 0
   }
 }
