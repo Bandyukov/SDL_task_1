@@ -72,7 +72,7 @@
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
-              "providesAuthentication": false,
+              "providesAuthentication": true,
               "threats": []
             }
           },
@@ -108,7 +108,7 @@
               "hasOpenThreats": false,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
-              "isWebApplication": false,
+              "isWebApplication": true,
               "privilegeLevel": "",
               "threats": []
             }
@@ -146,7 +146,7 @@
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
-              "isALog": false,
+              "isALog": true,
               "isEncrypted": false,
               "isSigned": false,
               "storesCredentials": false,
