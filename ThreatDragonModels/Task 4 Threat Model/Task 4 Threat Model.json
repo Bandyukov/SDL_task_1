@@ -174,6 +174,141 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
+              "name": "User auth request",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": true,
+              "protocol": "HTTP/S",
+              "threats": []
+            },
+            "id": "c7fb17c8-91af-4431-880a-4d5109316e96",
+            "labels": [
+              "User auth request"
+            ],
+            "source": {
+              "cell": "341007bf-3b1c-4a28-9e30-1b78dc823a6f"
+            },
+            "target": {
+              "cell": "33ad4139-3353-4217-8a9c-17581dec553a"
+            },
+            "vertices": [
+              {
+                "x": 1980,
+                "y": 250
+              },
+              {
+                "x": 2020,
+                "y": 250
+              },
+              {
+                "x": 2070,
+                "y": 290
+              },
+              {
+                "x": 2100,
+                "y": 320
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Response from DB",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "HTTP/S",
+              "threats": []
+            },
+            "id": "882ebf2d-441e-4b5a-a827-64bdecfbb542",
+            "labels": [
+              "Response from DB"
+            ],
+            "source": {
+              "x": 2480,
+              "y": 400
+            },
+            "target": {
+              "cell": "33ad4139-3353-4217-8a9c-17581dec553a"
+            },
+            "vertices": [
+              {
+                "x": 2330,
+                "y": 490
+              }
+            ]
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Internet Boundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "id": "b0e3697f-ab1c-4a57-9eda-73928a712ed5",
+            "labels": [
+              "Internet Boundary"
+            ],
+            "source": {
+              "x": 1920,
+              "y": 170
+            },
+            "target": {
+              "x": 1920,
+              "y": 580
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
               "name": "Response",
               "description": "",
               "outOfScope": false,
@@ -222,111 +357,6 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Use auth request",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "id": "c7fb17c8-91af-4431-880a-4d5109316e96",
-            "labels": [
-              "Use auth request"
-            ],
-            "source": {
-              "cell": "341007bf-3b1c-4a28-9e30-1b78dc823a6f"
-            },
-            "target": {
-              "cell": "33ad4139-3353-4217-8a9c-17581dec553a"
-            },
-            "vertices": [
-              {
-                "x": 1980,
-                "y": 250
-              },
-              {
-                "x": 2070,
-                "y": 290
-              },
-              {
-                "x": 2100,
-                "y": 320
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Response from DB",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "id": "882ebf2d-441e-4b5a-a827-64bdecfbb542",
-            "labels": [
-              "Response from DB"
-            ],
-            "source": {
-              "x": 2480,
-              "y": 400
-            },
-            "target": {
-              "cell": "33ad4139-3353-4217-8a9c-17581dec553a"
-            },
-            "vertices": [
-              {
-                "x": 2330,
-                "y": 490
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
               "name": "Request from DB\n",
               "description": "",
               "outOfScope": false,
@@ -335,7 +365,7 @@
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
-              "protocol": "",
+              "protocol": "HTTP/S",
               "threats": []
             },
             "id": "0b616d82-9a09-4ee3-90ef-7e8e6b816c24",
@@ -354,38 +384,12 @@
                 "y": 250
               }
             ]
-          },
-          {
-            "shape": "trust-boundary-curve",
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Boundary",
-              "name": "Internet Boundary",
-              "description": "",
-              "isTrustBoundary": true,
-              "hasOpenThreats": false
-            },
-            "id": "b0e3697f-ab1c-4a57-9eda-73928a712ed5",
-            "labels": [
-              "Internet Boundary"
-            ],
-            "source": {
-              "x": 1920,
-              "y": 170
-            },
-            "target": {
-              "x": 1920,
-              "y": 580
-            }
           }
         ]
       }
     ],
     "diagramTop": 1,
     "reviewer": "Bandyukov",
-    "threatTop": 0
+    "threatTop": 2
   }
 }
